@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+   <scripts src="java.js"></scripts>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script>
+      function changeMode(){
+          var mybody = document.body;
+          mybody.classList.toggle('mydark')
+      }
+  </script>
+    <title>Flipkart</title>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="#">Flipkart</a>
+      <div class="header-left-p">
+      <p><a href="#">Explore</a><span>Plus<i class="fas fa-plus"></i></span></p>
+    </div>
+    </div>
+    <div class="header-center">
+    <input class="header-center-input" type="text" placeholder="Search the best product, brand and more"><i class="fa-duotone fa-magnifying-glass"></i>
+
+    </div>
+    <div class="header-right">
+      <a class="active" href="#">Login</a>
+      <a href="#">More<i class="fas fa-sort-down"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i>Cart</a>
+      <button style="width: 75px; height: 35px; margin-top: 1%;" onClick="changeMode()"><i class="fa-solid fa-moon"></i>Mode</button>
+    </div>
+    
+  </header>
+
+    <!--Categories-->
+    <div style="border: double blue; height: 155px;">
+        <div class="top-offer" style="float: left;">
+            <a href="top-offer"><img src="images//top offers.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"></a>
+            <!--<span style="margin-left: 77px;">Top Offer</span>-->
+
+        </div>
+        
+        <div class="grocery" style="float: left;">
+            <a href="grocery"><img src="images/grocery.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="mobile" style="float: left;">
+            <a href="mobile"><img src="images/mobiles.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="fashion" style="float: left;">
+            <a href="fashion"><img src="images/fashion.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="electronics" style="float: left;">
+            <a href="electronics"><img src="images/electronucs.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="home" style="float: left;">
+            <a href="home"><img src="images/home.jpg" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="application" style="float: left;">
+            <a href="application"><img src="images/applicances.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="travel" style="float: left;">
+            <a href="travel"><img src="images/travel.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div class="beauty-toys" >
+            <a href="beauty-toys"><img src="images/beauty toys and more.png" style="height: 99px; margin-top: 12px;margin-left: 58px;"> </a>
+
+        </div>
+        <div>
+            <span style="margin-left: 73px;">Top offers</span>
+            <span style="margin-left: 88px;">Grocery</span>
+            <span style="margin-left: 100px;">Mobiles</span>
+            <span style="margin-left: 92px;">Fashion</span>
+            <span style="margin-left: 91px;">Electronics</span>
+            <span style="margin-left: 98px;">Home</span>
+            <span style="margin-left: 90px;">Application</span>
+            <span style="margin-left: 93px;">Travel</span>
+            <span style="margin-left: 73px;">Beauty & Toys</span>
+
+        </div>
+
+    </div>
+  <!-- banner -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./images/1st slide.PNG" alt="First slide">
+      </div>
+      <div id="coupon" style="height: 211px; width: 348px; border: groove plum; position: absolute; margin-left: 587px; margin-top: -159px;">
+        <button onClick="closeCoupon()">&times;</button>
+      </div>
+    
+  </div>
+  <script>
+    window.onload=loadCoupon()
+</script>
+    <!--Scroller
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1st slide.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/2nd slider.PNG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/3.PNG" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>-->
+    <!--Deal of the day-->
+    <div>
+        <h3>Deal of the day</h3>
+        <hr>
+        <div class="card" style="width: 18rem; float: left; margin-left: 5px; " >
+            <img src="images/Fragrence.PNG" class="card-img-top" alt="..." style="height: 200px;">
+            <div class="card-body">
+              <p class="card-text" style="text-align: center;">Fragrance Top Picks</p>
+            <p style="text-align: center; color: greenyellow;">30-60% Off</p></div>
+          </div>
+          <div class="card" style="width: 18rem; float: left; margin-left: 10px; " >
+            <img src="images/Electric hardware.PNG" class="card-img-top" alt="..." style="height: 200px;">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;">Electical Hardware</p>
+                <p style="text-align: center; color: greenyellow;">Up to 50% Off</p></div>
+              </div>
+          </div>
+          <div class="card" style="width: 18rem; float: left; margin-left: 10px; " >
+            <img src="images/coffee.PNG" class="card-img-top" alt="..." style="height: 200px;">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;">Coffee Tables & more</p>
+                <p style="text-align: center; color: greenyellow;">For $199</p></div>
+              </div>
+          </div>
+          <div class="card" style="width: 18rem; float: left; margin-left: 10px; " >
+            <img src="images/shirts.PNG" class="card-img-top" alt="..." style="height: 200px;">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;">Shirts</p>
+                <p style="text-align: center; color: greenyellow;">Under $500</p></div>
+              </div>
+          </div>
+          <div class="card" style="width: 18rem; float: left; margin-left: 10px; " >
+            <img src="images/shorts.PNG" class="card-img-top" alt="..." style="height: 200px;">
+            <div class="card-body">
+                <p class="card-text" style="text-align: center;">Shorts and Trackpants</p>
+                <p style="text-align: center; color: greenyellow;">Under $499</p></div>
+               </div>
+          </div>
+          
+
+    </div>
+    
+</body>
+</html>
